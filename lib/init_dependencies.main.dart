@@ -92,8 +92,14 @@ void _initBlog() {
     ),
   );
 
+  serviceLocator.registerFactory(
+    () => DeleteBlog(
+      serviceLocator(),
+    ),
+  );
+
   serviceLocator.registerLazySingleton(() => BlogBloc(
-        uploadBlog: serviceLocator(),
-        getAllBlogs: serviceLocator(),
-      ));
+      uploadBlog: serviceLocator(),
+      getAllBlogs: serviceLocator(),
+      deleteBlog: serviceLocator()));
 }

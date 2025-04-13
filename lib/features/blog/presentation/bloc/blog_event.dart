@@ -20,3 +20,8 @@ final class BlogUpload extends BlogEvent {
 }
 
 final class BlogFetchAllBlogs extends BlogEvent {}
+
+final class DeleteCurrentBlog extends BlogEvent {
+  final String blogId;
+  DeleteCurrentBlog(this.blogId);
+}

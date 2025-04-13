@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:microblog/core/error/exceptions.dart';
@@ -12,6 +13,7 @@ abstract interface class BlogRemoteDataSource {
   });
 
   Future<List<BlogModel>> getAllBlogs();
+  Future<void> deleteBlog(String blogId);
 }
 
 class BlogRemoteDataSrourceImpl implements BlogRemoteDataSource {
@@ -61,6 +63,19 @@ class BlogRemoteDataSrourceImpl implements BlogRemoteDataSource {
             ),
           )
           .toList();
+    } on PostgrestException catch (e) {
+      throw ServerExceptions(e.message);
+    } catch (e) {
+      throw ServerExceptions(e.toString());
+    }
+  }
+
+  @override
+  Future<void> deleteBlog(String blogId) async {
+    try {
+      final res = await supabaseClient.from('blogs').delete().eq('id', blogId);
+      log(res.toString());
+      // Log the response for debugging
     } on PostgrestException catch (e) {
       throw ServerExceptions(e.message);
     } catch (e) {

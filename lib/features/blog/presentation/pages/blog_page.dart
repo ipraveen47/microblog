@@ -69,6 +69,8 @@ class _BlogPageState extends State<BlogPage> {
         listener: (context, state) {
           if (state is BlogFailure) {
             showSnackbar(context, state.error);
+          } else if (state is BlogDeleteSuccess) {
+            showSnackbar(context, "Blog Deleted Successfully ");
           }
         },
         builder: (context, state) {
