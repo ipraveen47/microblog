@@ -1,16 +1,19 @@
 # microblog
 
-A new Flutter project.
+microblog is a microblogging application built on Flutter and Supabase:
 
-## Getting Started
+Key features :
+1. Authentication
+2. blog (allows users to create their own blog posts)
+3. Profile
+4. Clean Architecture & SOLID principles
+5. Feature First Approach 
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+#visuals
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img width="424" height="906" alt="image" src="https://github.com/user-attachments/assets/f315e072-325b-4a51-b006-510afa3a6e41" />
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img width="426" height="904" alt="image" src="https://github.com/user-attachments/assets/f9e28396-f855-40ab-96f6-5f28d7e877df" />
+<img width="421" height="819" alt="image" src="https://github.com/user-attachments/assets/f515db4b-c0b5-4eae-bf50-5c4a9bb58b6b" />
+
