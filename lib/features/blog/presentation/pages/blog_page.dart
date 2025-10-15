@@ -33,9 +33,7 @@ class _BlogPageState extends State<BlogPage> {
             Navigator.push(context, ProfilePage.route());
           },
           child: const Padding(
-            padding: EdgeInsets.only(
-              left: 10,
-            ),
+            padding: EdgeInsets.only(left: 10, top: 10),
             child: CircleAvatar(
               radius: 30,
               child: Icon(
